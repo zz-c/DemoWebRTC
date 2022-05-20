@@ -12,4 +12,7 @@ public:
 
 private:
     Ui::DemoCaptureClass ui;
+
+private slots:
+    void on_returnButton_clicked();
 };
