@@ -87,7 +87,12 @@
     <QtUic Include="DemoCapture.ui" />
     <QtMoc Include="DemoCapture.h" />
     <ClCompile Include="DemoCapture.cpp" />
+    <ClCompile Include="Index.cpp" />
     <ClCompile Include="main.cpp" />
+    <QtUic Include="Index.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Index.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
