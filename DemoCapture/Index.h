@@ -18,4 +18,5 @@ private:
 
 private slots:
 	void on_goCaptureButton_clicked();
+	void slotTest();
 };

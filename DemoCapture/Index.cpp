@@ -19,6 +19,11 @@ void Index::on_goCaptureButton_clicked()
 	//this->hide();
 	this->close();
 }
+void Index::slotTest()
+{
+	QMessageBox message(QMessageBox::NoIcon, "Tip", "slotTest ");
+	message.exec();
+}
 
 void DemoCapture::on_returnButton_clicked()
 {
