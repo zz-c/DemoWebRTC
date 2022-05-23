@@ -17,8 +17,8 @@ netsh winhttp reset proxy
 1. Visual Studio安装（最好安装在默认的C盘路径）
 选择最新的vs2022，用的是社区版，安装时选择自定义安装
 a）勾选使用C++的桌面开发
-b)  Windows 10 SDK安装10.0.20348.0 取消10.0.1904.0
-c）勾选MFC及ATL这两项
+b)  Windows 10 SDK安装10.0.20348.0 取消10.0.1904.0 
+c）勾选MFC及ATL这两项（MSVS）
 d) 安装完VS2022后，必须安装sdk调试工具。打开控制面板->程序与功能，找到Windows Software Development Kit, 点更改勾选Debugging Tools For Windows
 
 2. 安装depot_tools
