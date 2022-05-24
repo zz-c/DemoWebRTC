@@ -17,6 +17,8 @@ namespace desktop {
     public:
         void test();
         void mouseMove(int x,int y);
+        void leftClick();
+        void rightClick();
 
     private:
 
