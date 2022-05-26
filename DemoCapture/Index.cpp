@@ -1,6 +1,10 @@
 #include "Index.h"
 #include "DemoCapture.h"
 #include <QMessageBox>
+#include <iostream>
+extern "C" {
+#include "libavcodec/avcodec.h"
+}
 
 Index::Index(QWidget *parent)
 	: QWidget(parent)
@@ -21,7 +25,9 @@ void Index::on_goCaptureButton_clicked()
 }
 void Index::slotTest()
 {
-	QMessageBox message(QMessageBox::NoIcon, "Tip", "slotTest ");
+	QMessageBox message(QMessageBox::NoIcon, "Tip", "slotTest FFmpeg");
+	std::cout << "Test FFmpeg" << std::endl;
+	std::cout << avcodec_configuration() << std::endl;
 	message.exec();
 }
 
