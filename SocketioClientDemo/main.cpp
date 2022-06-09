@@ -82,6 +82,22 @@ int main(int argc, const char* args[])
         _lock.unlock();
 
     }));
+    current_socket->on("message", sio::socket::event_listener([&](event& edata) {
+        _lock.lock();
+
+        message::list dataList = edata.get_messages();
+        message::ptr roomid = dataList.at(0);
+        std::cout << "roomid:" << roomid->get_string() << std::endl;
+        message::ptr data = dataList.at(1);
+        std::cout << "data type:" << data->get_map()["type"]->get_string() << std::endl;
+
+        message::list messageList;
+        messageList.push(string_message::create("room1"));
+        messageList.push(string_message::create("{\"message\":\"hello world message\"}"));
+        current_socket->emit("message", messageList);
+        _lock.unlock();
+
+    }));
     current_socket->emit("join", roomId);
 
 
